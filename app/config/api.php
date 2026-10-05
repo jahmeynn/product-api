@@ -44,7 +44,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | below (see their notes). The API library refuses to start otherwise.
 |
 */
-$config['api_helper_enabled'] = FALSE;
+$config['api_helper_enabled'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,7 +121,7 @@ $config['refresh_token_key'] = getenv('REFRESH_TOKEN_KEY') ?: '';
 | you perform your own server-side authorization checks.
 |
 */
-$config['jwt_verify_user'] = TRUE;
+$config['jwt_verify_user'] = false;
 
 /*
 |--------------------------------------------------------------------------

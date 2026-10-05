@@ -1,22 +1,3 @@
-# macOS
-.DS_Store
-
-# Environment
-.env
-!.env.example
-
-# Dependencies
-vendor/
-app/vendor/
-composer.lock
-
-# Cache & Logs
-runtime/*
-!runtime/.htaccess
-!runtime/index.html
-*.log
-*.cache
-
 # IDE
 .idea/
 .vscode/
@@ -24,3 +5,34 @@ runtime/*
 
 # OS
 Thumbs.db
+.DS_Store
+
+# PHP / LavaLust
+/vendor/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Runtime
+runtime/cache/
+runtime/logs/
+runtime/sessions/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Separate React frontend repository
+frontend/

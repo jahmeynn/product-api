@@ -1,4 +1,30 @@
 <?php
+
+// ============================================================
+// CORS FOR REACT FRONTEND
+// ============================================================
+
+$allowed_origins = [
+    'http://localhost:5173',
+    'http://localhost:5174',
+];
+
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+if (in_array($origin, $allowed_origins, true)) {
+    header("Access-Control-Allow-Origin: $origin");
+    header("Vary: Origin");
+}
+
+header("Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, Accept");
+header("Access-Control-Max-Age: 86400");
+
+// Handle browser preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
 define('PREVENT_DIRECT_ACCESS', TRUE);
 /**
  * ------------------------------------------------------------------

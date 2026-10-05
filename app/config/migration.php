@@ -44,7 +44,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | and disable it back when you're done.
 |
 */
-$config['migration_enabled'] = FALSE;
+$config['migration_enabled'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +67,5 @@ $config['migration_table'] = 'migrations';
 |
 */
 $config['migration_path'] = APP_DIR.'migrations/';
+
+
