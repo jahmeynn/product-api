@@ -4,6 +4,26 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 class ApiController extends Controller
 {
+    public function index()
+{
+    $this->api->respond([
+        'success' => true,
+        'message' => 'Product Management API is running.',
+        'framework' => 'LavaLust',
+        'version' => '1.0',
+        'endpoints' => [
+            'POST /api/login' => 'Login',
+            'POST /api/create' => 'Register',
+            'POST /api/refresh' => 'Refresh token',
+            'POST /api/logout' => 'Logout',
+            'GET /api/products' => 'Get products',
+            'POST /api/products' => 'Add product',
+            'PUT /api/products/{id}' => 'Update product',
+            'PATCH /api/products/{id}' => 'Update product',
+            'DELETE /api/products/{id}' => 'Delete product'
+        ]
+    ]);
+}
     public function __construct()
     {
         parent::__construct();
@@ -11,6 +31,7 @@ class ApiController extends Controller
         $this->call->database();
         $this->call->library('api');
     }
+
 
 
     /* =========================================================
