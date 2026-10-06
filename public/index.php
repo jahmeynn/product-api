@@ -7,7 +7,7 @@
 $allowed_origins = [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://product-frontend-wudn.onrender.com',
+    'https://product-frontend-sandy.vercel.app',
 ];
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
