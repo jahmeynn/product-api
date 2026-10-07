@@ -145,7 +145,11 @@ $config['users_table'] = 'users';
 | a browser, so set your real domain in production.
 |
 */
-$config['allow_origin'] = '*';
+$config['allow_origin'] = [
+    'https://product-frontend-sandy.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:5174'
+];
 
 /*
 |--------------------------------------------------------------------------
@@ -165,7 +169,7 @@ $config['refresh_token_table'] = 'refresh_tokens';
 | application's name or URL.
 |
 */
-$config['jwt_issuer'] = 'your-app';
+$config['jwt_issuer'] = 'product-api';
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +180,7 @@ $config['jwt_issuer'] = 'your-app';
 |
 */
 
-$config['jwt_audience'] = 'your-app-clients';
+$config['jwt_audience'] = 'product-frontend';
 
 /*
 |--------------------------------------------------------------------------
